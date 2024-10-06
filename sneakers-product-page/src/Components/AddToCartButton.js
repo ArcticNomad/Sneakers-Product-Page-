@@ -24,6 +24,7 @@ export default function AddToCartButton(props)
 
     return (
         <>
+
             <div className="quantityControls">
                 <button className="decrease" onClick={onDecreaseClick}>
                     -

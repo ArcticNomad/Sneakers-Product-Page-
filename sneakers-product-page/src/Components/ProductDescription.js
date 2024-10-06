@@ -4,26 +4,29 @@ export default function productDescription(props)
 {
     return (
         <>
-            <article>
+            <article className="description">
                 <div className="companyName">
-                    <h2>{props.company}</h2>
+                    <p>{props.company}</p>
                 </div>
-                <div className="name"></div>
-                <h1>{props.name}</h1>
-                <div className="productDescription">
-                    <h3>{props.description}</h3>
-                </div>
-                <div className="price">
-                    <strong>
-                        {props.price}
-                    </strong>
-                </div>
-                <div className="discount">
-                    <strong>
-                        {props.discount}
-                    </strong>
+                <div className="name">
+                    <h1>{props.name}</h1>
                 </div>
 
+                <div className="productDescription">
+                    <p>{props.description}</p>
+                </div>
+                <div className="priceSection">
+                    <div className="price">
+                        <strong>
+                            {"$"+props.price}
+                        </strong>
+                    </div>
+                    <div className="discount">
+                        <strong>
+                            {props.discount}
+                        </strong>
+                    </div>
+                </div>
             </article>
         </>
     )

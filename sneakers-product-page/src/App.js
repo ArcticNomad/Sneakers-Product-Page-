@@ -15,6 +15,7 @@ function App() {
     const [visibility,setVisibility] = useState(false);
     const navOptions = ["Collections", "Men", "Women", "About", "Contact"];
     const productThumbnails = images.thumbnails.map(thumbnail => require(`./assets/${ thumbnail }`));
+    const productImages =images.productImages.map(image => require(`./assets/${ image }`));
 
     function onCartClick()
     {
@@ -30,7 +31,7 @@ function App() {
                 cartClick={onCartClick}
                 userAvatar={avatar}
             />
-            <ImageSection pThumbnails={productThumbnails} />
+            <ImageSection pThumbnails={productThumbnails} pImages={productImages} />
             <ProductDescription company={description.companyName} name={description.name} promo={description.promo} description={description.description} price={description.price} discount={description.discount}  />
             <AddToCartButton cartLogo={cartLogo}/>
 
