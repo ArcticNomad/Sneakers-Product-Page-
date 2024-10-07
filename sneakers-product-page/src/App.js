@@ -24,18 +24,21 @@ function App() {
 
     return (
         <>
-            <Navbar
-                Weblogo={logo}
-                navOptions={navOptions}
-                cart={cartLogo}
-                cartClick={onCartClick}
-                userAvatar={avatar}
-            />
-            <ImageSection pThumbnails={productThumbnails} pImages={productImages} />
-            <ProductDescription company={description.companyName} name={description.name} promo={description.promo} description={description.description} price={description.price} discount={description.discount}  />
-            <AddToCartButton cartLogo={cartLogo}/>
+            <div className="App">
+                <Navbar
+                    Weblogo={logo}
+                    navOptions={navOptions}
+                    cart={cartLogo}
+                    cartClick={onCartClick}
+                    userAvatar={avatar}
+                />
+                <ImageSection pThumbnails={productThumbnails} pImages={productImages} />
+                <ProductDescription company={description.companyName} name={description.name} promo={description.promo} description={description.description} price={description.price} discount={description.discount}  />
+                <AddToCartButton cartLogo={cartLogo}/>
 
-            {(visibility) && (<CartPage name={description.name} price={description.price} quantity={description.quantity} />)}
+                {(visibility) && (<CartPage name={description.name} price={description.price} quantity={description.quantity} />)}
+
+            </div>
 
         </>
     );
