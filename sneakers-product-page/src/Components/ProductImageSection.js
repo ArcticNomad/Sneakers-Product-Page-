@@ -6,7 +6,7 @@ export default function ImageSection (props)
         <>
             <article className="image-section">
                 <div className="main-image">
-                    <img  src={props.pImages[0]} alt="img" height={405} width={418}  />
+                    <img  src={props.pImages[0]} alt="img" height={405} width={418}   />
                 </div>
 
                 <div className="thumbnails">
