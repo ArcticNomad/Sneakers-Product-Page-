@@ -33,8 +33,7 @@ function App() {
                     userAvatar={avatar}
                 />
                 <ImageSection pThumbnails={productThumbnails} pImages={productImages} />
-                <ProductDescription company={description.companyName} name={description.name} promo={description.promo} description={description.description} price={description.price} discount={description.discount}  />
-                <AddToCartButton cartLogo={cartLogo}/>
+                <ProductDescription company={description.companyName} name={description.name} promo={description.promo} description={description.description} price={description.price} discount={description.discount} cart={cartLogo} />
 
                 {(visibility) && (<CartPage name={description.name} price={description.price} quantity={description.quantity} />)}
 
